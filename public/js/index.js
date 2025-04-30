@@ -74,7 +74,7 @@ function hideLoading() {
     document.body.style.pointerEvents = 'auto';
 }
 
-fetch('/public/js/rubricas.json')
+fetch('./public/js/rubricas.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('Arquivo não encontrado');
