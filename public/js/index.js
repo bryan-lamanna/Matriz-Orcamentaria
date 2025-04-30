@@ -121,7 +121,7 @@ fetch('./public/js/rubricas.json')
                     tbody.appendChild(headerRow);
 
                     // Linhas P/R/D
-                    ['P', 'R', 'D'].forEach(tipo => {
+                    ['O', 'R', 'D'].forEach(tipo => {
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td class="conta-header">${tipo}</td>
