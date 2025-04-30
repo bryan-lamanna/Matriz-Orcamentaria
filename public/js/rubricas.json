@@ -1,0 +1,126 @@
+{
+    "RECEITA": [
+        "PLANOS PF",
+        "PLANOS PJ",
+        "EXTRA PLANO",
+        "AMBULATÓRIOS",
+        "INTERCÂMBIO"
+    ],
+    "CUSTO ASSISTENCIAL": [
+        "REPASSE AO COOPERADO",
+        "40011 - Depesa recolhimento lixo",
+        "40015 - Material odontológico ambulatório",
+        "40027 - Lavanderia",
+        "40026 - Manutenção equip. odontológicos",
+        "49349 - Credenciados",
+        "49351 - Coordenação",
+        "49353 - Custo deslocamento assistência",
+        "49354 - Custo deslocamento assistência",
+        "17191 - Outros gastos odontológicos"
+    ],
+    "TRIBUTOS": [
+        "10103 - PIS e Cofins",
+        "50359 - ISSQN"
+    ],
+    "DESPESAS ADMINISTRATIVAS DIVERSAS": [
+        "50173 - Cartório",
+        "50039 - Livros, jornais e revistas",
+        "50044 - Aquisição móveis, utensílios e periféricos",
+        "16436 - Custas Judiciais",
+        "50036 - Seguros"
+    ],
+    "RETENÇÕES DE IMPOSTOS E CONTRIBUIÇÕES": [
+        "IRRF",
+        "01564 - ISSQN retido NF",
+        "01554 - Cofins a recolher retido cod. 5960",
+        "01561 - PIS a recolher retido cod. 5979",
+        "21227 - PIS/COFINS/CSLL retido cod. 5952",
+        "01588 - INSS serviços de terceiros retido"
+    ],
+    "DESPESAS DE DESLOCAMENTO": [
+        "40385 - Conduções urbanas",
+        "50029 - Viagens",
+        "50045 - Fretes e carretos"
+    ],
+    "DESPESA BANCÁRIA": [
+        "50191 - Despesa bancária"
+    ],
+    "CONTRIOBUÇÕES": [
+        "50038 - Contribuição OCERGS",
+        "40013 - Manutenção Brasil",
+        "40014 - Manutenção Federação"
+    ],
+    "IMPOSTOS": [
+        "50231 - IRRF despesa",
+        "16747 - ICMS",
+        "50017 - IPVA despesa",
+        "50054 - IPTU",
+        "50022 - Taxas municipais",
+        "80035 - IRPJ",
+        "80013 - CSLL"
+    ],
+    "DESPESAS COM PUBLICIDADE E PROPAGANDA": [
+        "50150 - Publicidade e propaganda",
+        "50763 - Brindes",
+        "50764 - Confraternização e eventos"
+    ],
+    "DESPESAS COM UTILIZAÇÃO DE EQUIP. E VEÍCULOS": [
+        "16478 - Aluguel equipamentos",
+        "40309 - Aluguel veículo",
+        "50396 - Manutenção de equipamentos",
+        "16485 - Manutenção e combust. de veículos"
+    ],
+    "DESPESAS COM LOCALIZAÇÃO E FUNCIONAMENTO": [
+        "50419 - Aluguel prédio",
+        "50033 - Condomínio",
+        "50187 - Agua",
+        "50028 - Material de expediente",
+        "51111 - Internet",
+        "50031 - Telefone",
+        "50186 - Luz",
+        "50169 - Limpeza",
+        "50043 - Reparos e consertos moveis e utensilios",
+        "50162 - Reparos e consertos predio",
+        "50110 - Material consumo",
+        "50027 - Correios",
+        "48902 - Garagem",
+        "50755 - Licenças e alvarás"
+    ],
+    "REMUNERAÇÃO POR SERVIÇOS DE TERCEIROS": [
+        "50952 - Advogados",
+        "16299 - Auditoria",
+        "50032 - Consultoria",
+        "50951 - Contabilidade",
+        "50653 - Licenças e manutenção de softwares",
+        "50151 - Segurança",
+        "50042 - Serviços tecnicos"
+    ],
+    "DESPESAS COM ENCARGOS SOCIAIS": [
+        "50238 - Contribuição INSS",    
+        "50265 - Contribuição FGTS"
+    ],
+    "DESPESAS COM EMPREGADOS": [
+        "50233 - Salarios",
+        "50069 - Estagiário",
+        "50344 - Uniforme",
+        "50024 - Unimed",
+        "50001 - Cursos",
+        "50342 - Vale alimentação",
+        "50241 - Vale transporte",
+        "50046 - Serviços de medicina ocupacional",
+        "50002 - Auxílio educação"
+    ],
+    "DESPESAS COM ADMINISTRAÇÃO": [
+        "50360 - Pró-labore",
+        "40492 - Diárias e cédula de presença"
+    ],
+    "DESPESAS DE COMERCIALIZAÇÃO": [
+        "40012 - Comissões",
+        "50528 - Licitação despesa",
+        "16780 - Taxa ANS"
+    ],
+    "DESPESAS FINANCEIRAS": [
+        "50210 - Multa e juros geral",
+        "40230 - IOF"
+    ]
+}

@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz Orçamentária</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+</head>
+<body>
+    <div class="department-header">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="logo-container me-3" style="width: 10%;">
+                    <!-- Substitua pelo seu logotipo -->
+                    <img src="/logo-uniodonto_nova.svg" alt="Logo" class="img-fluid" style="transform: scale(1.5);">
+                </div>
+                <div class="header-title flex-grow-1 text-center" style="width: 90%;">
+                    <h1 style="transform: translateX(-5%);">Matriz Orçamentária</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid pt-3 pb-1" style="background-color: rgb(193, 193, 193);">
+        <div class="department-buttons">
+            <!-- Linha principal -->
+            <div class="btn-group-wrap btn-group-main">
+                <div class="btn-group">
+                    <button class="btn btn-department btn-main-department active">
+                        <i class="fas fa-layer-group"></i> TODOS
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-desktop"></i> ADMINISTRATIVO
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-check-circle"></i> QUALIDADE
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-users"></i> RH
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-server"></i> TI
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-store"></i> COMERCIAL
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-cogs"></i> NÚCL. OPER.
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-gavel"></i> CONS. EXECUTIVO
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-home"></i> LAR ST. RITA
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-balance-scale"></i> CONS. FISCAL
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-map-marker-alt"></i> PA PEL
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-map-marker-alt"></i> PA GUAIBA
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-calculator"></i> CONTABILIDADE
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-handshake"></i> CENT. COOP.
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-building"></i> CORPORATIVO
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-industry"></i> AGCO CANOAS
+                    </button>
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-industry"></i> AGCO ST. ROSA
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-department btn-sub-department">
+                        <i class="fas fa-industry"></i> AGCO IBIRUBA
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-chart-line"></i> FINANCEIRO
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-balance-scale-left"></i> JURÍDICO
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-bullhorn"></i> MARKET
+                    </button>
+                    <button class="btn btn-department btn-main-department">
+                        <i class="fas fa-city"></i> NOVA SEDE
+                    </button>
+                </div>
+
+                <div class="year-selector dropdown text-center ">
+                    <h6 style="margin-bottom: 5px;">Ano Competência:</h6>
+                    <button style=" margin-bottom: 5px !important;" class="btn btn-year dropdown-toggle" type="button" id="yearDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-year="2023">
+                        <i class="fas fa-calendar-alt me-2"></i> 2023
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="yearDropdown" style="width: 105px !important; background-color: #e1ff7b !important;">
+                        <li><a class="dropdown-item" href="#" data-year="2025">2025</a></li>
+                        <li><a class="dropdown-item" href="#" data-year="2024">2024</a></li>
+                        <li><a class="dropdown-item active" href="#" data-year="2023">2023</a></li>
+                        <li><a class="dropdown-item" href="#" data-year="2022">2022</a></li>
+                        <li><a class="dropdown-item" href="#" data-year="2021">2021</a></li>    
+                    </ul>
+                </div>
+            
+            </div>                 
+        </div>
+    </div>
+    
+    <table id="budget-matrix">
+        <thead>
+            <tr>
+                <th>Conta</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+                <th class="total-column">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tbody>
+                <!-- Receita -->        
+                <tr>
+                    <td class="conta-header" colspan="14" id="receita-link">RECEITA</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Custo Assistencial -->
+                <tr>
+                    <td class="conta-header" colspan="14">CUSTO ASSISTENCIAL</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas Administrativas Diversas -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS ADMINISTRATIVAS DIVERSAS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Retenções de impostos e contribuições -->
+                <tr>
+                    <td class="conta-header" colspan="14">RETENÇÕES DE IMPOSTOS E CONTRIBUIÇÕES</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas de deslocamento -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS DE DESLOCAMENTO</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Continuação com as demais contas (padrão repetido) -->
+                <!-- Despesa bancária -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESA BANCÁRIA</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Contribuições -->
+                <tr>
+                    <td class="conta-header" colspan="14">CONTRIBUIÇÕES</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Impostos -->
+                <tr>
+                    <td class="conta-header" colspan="14">IMPOSTOS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas com publicidade e propaganda -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS COM PUBLICIDADE E PROPAGANDA</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas com utilização de equip. e veículos -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS COM UTILIZAÇÃO DE EQUIP. E VEÍCULOS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas com localização e funcionamento -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS COM LOCALIZAÇÃO E FUNCIONAMENTO</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Remuneração por serviços de terceiros -->
+                <tr>
+                    <td class="conta-header" colspan="14">REMUNERAÇÃO POR SERVIÇOS DE TERCEIROS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas com encargos sociais -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS COM ENCARGOS SOCIAIS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas com empregados -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS COM EMPREGADOS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas com administração -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS COM ADMINISTRAÇÃO</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas de comercialização -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS DE COMERCIALIZAÇÃO</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            
+                <!-- Despesas financeiras -->
+                <tr>
+                    <td class="conta-header" colspan="14">DESPESAS FINANCEIRAS</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">P</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">R</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+                <tr>
+                    <td class="conta-header">D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="total-column">0</td>
+                </tr>
+            </tbody>
+        </tbody>
+    </table>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Carregando...</div>
+    </div>
+  <script src="/public/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
