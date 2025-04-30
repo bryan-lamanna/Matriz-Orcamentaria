@@ -31,6 +31,21 @@ body {
     width: 160px !important;
 }
 
+.modal-table {
+    transform: translateY(-20px) !important;
+}
+
+.subconta-header {
+    color: #e1ff7b !important;
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px  !important;
+}
+
+.subconta-header th {
+    background-color: #a60069 !important;
+
+}
+
 td:hover {
     background-color: #e1ff7b !important ;
     color: #a60069 !important;
