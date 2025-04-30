@@ -121,10 +121,10 @@ fetch('./public/js/rubricas.json')
                     tbody.appendChild(headerRow);
 
                     // Linhas P/R/D
-                    ['O', 'R', 'D'].forEach(tipo => {
+                    ['Orçado', 'Realizado', 'Diferença'].forEach(tipo => {
                         const row = document.createElement('tr');
                         row.innerHTML = `
-                            <td class="conta-header">${tipo}</td>
+                            <td class="conta-header subconta-td">${tipo}</td>
                             ${Array(12).fill('<td>0</td>').join('')}
                             <td class="total-column">0</td>
                         `;
@@ -162,6 +162,11 @@ fetch('./public/js/rubricas.json')
                      align-items: center;
                      z-index: 1000;
                  }
+
+                 .subconta-td {
+                    color: #a60069;
+                    font-size: 0.9rem;
+                    }
      
                  .modal-content {
                      background: white;
